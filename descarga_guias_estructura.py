@@ -40,25 +40,26 @@ with open(os.path.join(root_folder, "LICENSE"), "w", encoding="utf-8") as f:
     f.write("MIT License\n\n(c) 2025 Tu Nombre\n")
 
 with open(os.path.join(root_folder, "requirements.txt"), "w", encoding="utf-8") as f:
-    f.write("numpy\npandas\nscikit-learn\n")
+    f.write("numpy\npandas\nscikit-learn\nrequests\nbeautifulsoup4\n")
 
 with open(os.path.join(root_folder, ".gitignore"), "w", encoding="utf-8") as f:
-    f.write("__pycache__/\n*.pyc\n.env\n")
+    f.write("__pycache__/\n*.pyc\n.env\n.DS_Store\n")
 
 # Iterar sobre las asignaturas
 for nombre_asignatura, codigo_asignatura in asignaturas:
+    # Crear carpeta de la asignatura
     asignatura_path = os.path.join(root_folder, nombre_asignatura)
     os.makedirs(asignatura_path, exist_ok=True)
 
-    # Crear subcarpetas
+    # Crear subcarpetas dentro de la asignatura
     for sub in subfolders:
         os.makedirs(os.path.join(asignatura_path, sub), exist_ok=True)
 
-    # Crear README.md de la asignatura
+    # Crear README.md para la asignatura
     with open(os.path.join(asignatura_path, "README.md"), "w", encoding="utf-8") as f:
         f.write(f"# {nombre_asignatura}\n\nMateriales, ejemplos de código y guía docente para la asignatura **{nombre_asignatura}**.\n")
 
-    # Descargar guía PDF y guardarla en la raíz de la asignatura
+    # Descargar guía PDF y guardarla en la raíz de la carpeta de la asignatura
     params = {
         "codigoAsignatura": codigo_asignatura,
         "codigoTitulacion": "310801",
