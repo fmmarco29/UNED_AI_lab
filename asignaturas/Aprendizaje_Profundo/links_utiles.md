@@ -1,0 +1,2 @@
+- [Hugging Face](https://huggingface.co/)
+- [DeepLearning.ai](https://www.deeplearning.ai/)

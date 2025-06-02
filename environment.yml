@@ -1,0 +1,8 @@
+name: uned-ai-labs
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - jupyter

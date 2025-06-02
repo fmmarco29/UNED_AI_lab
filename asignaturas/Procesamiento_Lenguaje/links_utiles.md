@@ -1,0 +1,2 @@
+- [NLTK](https://www.nltk.org/)
+- [Stanford NLP](https://stanfordnlp.github.io/CoreNLP/)
